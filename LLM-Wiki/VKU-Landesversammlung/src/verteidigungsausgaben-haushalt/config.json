@@ -1,0 +1,32 @@
+{
+    "brand": "dz",
+    "language": "de",
+    "chart": {
+        "type": "custom",
+        "title": "Es fehlt das Bewusstsein, wie groß die Verteidigungsausgaben sind",
+        "subtitle": "Bundeshaushalt 2030, in Mrd. Euro"
+    },
+    "axes": {
+        "y": {"unit": "Mrd. Euro"}
+    },
+    "margins": {"bottom": 95},
+    "legend": {"position": "none"},
+    "data": [
+        {"category": "Gesamtausgaben", "value": 635, "kind": "total"},
+        {"category": "Verteidigungs-\nausnahme", "value": -201},
+        {"category": "Kern-\ninvestitionen*", "value": -49},
+        {"category": "Zinsen", "value": -82},
+        {"category": "Ausgaben ohne\nZinsen", "value": 304, "kind": "total"},
+        {"category": "Ausnahme\naußerhalb der\nNettokreditaufnahme", "value": -152, "highlight": true},
+        {"category": "Verbleibende\nAusgaben", "value": 152, "kind": "total"}
+    ],
+    "seriesConfig": [
+        {"key": "value", "name": "Mrd. Euro"}
+    ],
+    "lesebeispiel": {
+        "text": "Von den Gesamtausgaben in Höhe von 635 Mrd. Euro verbleiben nach Abzug von Verteidigungsausnahme (-201), Kerninvestitionen (-49) und Zinsen (-82) noch 304 Mrd. Euro laufende Ausgaben ohne Zinsen. Die Ausnahme außerhalb der Nettokreditaufnahme (-152) halbiert diesen Betrag auf 152 Mrd. Euro."
+    },
+    "source": {
+        "items": ["Finanzplan 2026–2030", "eigene Berechnungen"]
+    }
+}

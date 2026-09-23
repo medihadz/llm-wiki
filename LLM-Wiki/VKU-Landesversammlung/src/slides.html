@@ -1,0 +1,574 @@
+<section class="slide title">
+  <style>
+    .philippa-note{position:absolute;right:40px;bottom:75px;max-width:260px;
+      background:#DCF5E3;border:1px solid #9FD8AF;border-radius:6px;
+      padding:10px 14px;font-family:"ABC Social",Inter,Arial,sans-serif;
+      font-size:13px;line-height:1.4;color:#1E6B39}
+  </style>
+  <div class="philippa-note">@Philippa: vllt VKU Logo?</div>
+  <h1>Neue Finanzierungswege für die Daseinsvorsorge</h1>
+  <div class="sub">Wie gelingt Bayern eine sichere Zukunft?</div>
+  <div class="who">Philippa Sigl-Glöckner · Direktorin, Dezernat Zukunft – Institut für Makrofinanzen</div>
+  <div class="where">VKU-Landesversammlung, Augsburg · 29. September 2026</div>
+  <div class="foot"><div class="mark"><!--WORTMARKE_MARK--></div></div>
+</section>
+
+<section class="slide cover-sequence-slide" data-notes="Kurzer Rückblick: Deutschland hat wirtschaftliche Umbrüche schon mehrfach gemeistert – vom Wirtschaftswunder über die Automobilkrise bis zum heutigen neuen Wirtschaftsmodell. Pfeiltaste/Klick zeigt die drei Cover nacheinander.">
+  <style>
+    .cover-sequence-slide .cover-row{display:flex;align-items:center;justify-content:center;gap:28px;height:440px}
+    .cover-sequence-slide .cover-step{flex:1;height:440px;min-width:0;display:flex;align-items:center;justify-content:center;visibility:hidden}
+    .cover-sequence-slide .cover-step .plot{width:100%;height:100%}
+    .cover-sequence-slide .cover-step[data-step="0"]{visibility:visible}
+    .cover-sequence-slide .cover-arrow{flex:0 0 auto;font-size:40px;font-family:'GT Alpina',serif;color:var(--muted);visibility:hidden}
+    .cover-sequence-slide .cover-step[data-step="2"]{position:relative}
+    .cover-sequence-slide .cover-step[data-step="2"]::after{content:"?";position:absolute;top:-18px;right:-6px;font-family:"GT Alpina",serif;font-weight:400;font-size:104px;line-height:1;color:var(--accent)}
+  </style>
+  <div class="hd">Das nächste „Wirtschaftswunder“ ist noch offen</div>
+  <div class="area">
+    <div class="cover-row">
+      <div class="cover-step" data-step="0"><!--FIGURE:cover-wirtschaftswunder--></div>
+      <div class="cover-arrow" data-step="1">→</div>
+      <div class="cover-step" data-step="1"><!--FIGURE:cover-vw-krise--></div>
+      <div class="cover-arrow" data-step="2">→</div>
+      <div class="cover-step" data-step="2"><!--FIGURE:cover-new-germany--></div>
+    </div>
+  </div>
+  <div class="src"><!--SOURCE--></div>
+  <div class="foot"><div class="mark"><!--WORTMARKE_MARK--></div><div class="pagenum">2</div></div>
+  <script>
+  (function(){
+    var section = document.currentScript.closest('section');
+    var row = section.querySelector('.cover-row');
+    var items = [].slice.call(row.querySelectorAll('[data-step]'));
+    var max = items.reduce(function(m, el){ return Math.max(m, parseInt(el.getAttribute('data-step'), 10)); }, 0);
+    var step = 0;
+    function render(){
+      items.forEach(function(el){
+        el.style.visibility = (parseInt(el.getAttribute('data-step'), 10) <= step) ? 'visible' : 'hidden';
+      });
+    }
+    function advance(dir){
+      if(!section.classList.contains('active')) return false;
+      var next = step + dir;
+      if(next < 0 || next > max) return false;
+      step = next; render(); return true;
+    }
+    document.addEventListener('keydown', function(e){
+      if(!section.classList.contains('active')) return;
+      if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){
+        if(advance(1)){ e.preventDefault(); e.stopImmediatePropagation(); }
+      } else if(e.key==='ArrowLeft'||e.key==='PageUp'){
+        if(advance(-1)){ e.preventDefault(); e.stopImmediatePropagation(); }
+      }
+    }, true);
+    document.addEventListener('click', function(e){
+      if(!section.classList.contains('active')) return;
+      var dir = (e.clientX < window.innerWidth*0.28) ? -1 : 1;
+      if(advance(dir)){ e.stopImmediatePropagation(); }
+    }, true);
+  })();
+  </script>
+</section>
+
+<section class="slide lever-slide" data-notes="Deutschland kann im Wettbewerb nicht über niedrigere Kosten gewinnen – kein einzelner Hebel macht die Produktion allein tragfähig. Nötig ist Preissetzungsmacht durch Markteintrittsbarrieren.">
+  <style>
+    .lever-slide .lever-grid{display:grid;grid-template-columns:330px 829px;column-gap:60px;align-items:center}
+    .lever-slide .lever-grid>.mainc{font-family:"GT Alpina",Georgia,serif;font-size:20px;line-height:1.4}
+    .lever-slide .col-chart{position:relative}
+    .lever-slide .badge-mark{position:absolute;top:-30px;right:-6px;
+      font-family:"GT Alpina",serif;font-weight:400;font-size:96px;line-height:1;color:var(--accent);z-index:1}
+  </style>
+  <div class="hd">Hürde 1: Kostenreduktion schafft keine Wettbewerbsfähigkeit</div>
+  <div class="area">
+    <div class="lever-grid">
+      <div class="mainc">Deutschland wird den Wettbewerb nicht über die Kosten gewinnen. Seine Unternehmen brauchen Preissetzungsmacht durch Marktzutrittsschranken.</div>
+      <div class="col-chart"><div class="badge-mark">!</div><!--FIGURE:chart-hebel-produktion--></div>
+    </div>
+  </div>
+  <div class="src"><!--SOURCE--></div>
+  <div class="foot"><div class="mark"><!--WORTMARKE_MARK--></div><div class="pagenum">3</div></div>
+</section>
+
+<section class="slide huerde2-slide" data-notes="Selbst mit ambitionierten Sparmaßnahmen bleibt der Verteidigungshaushalt eine Last: die volle Integration in den Kernhaushalt bedeutet eine Halbierung der laufenden Ausgaben ohne Zinsen. Offene politische Frage, wer das zahlt.">
+  <style>
+    .huerde2-slide .lever-grid{display:grid;grid-template-columns:330px 829px;column-gap:60px;align-items:center}
+    .huerde2-slide .lever-grid>.mainc{font-family:"GT Alpina",Georgia,serif;font-size:20px;line-height:1.4}
+    .huerde2-slide .fig-title{font-family:"GT Alpina",Georgia,serif;font-size:20px;font-weight:400;color:var(--schwarz);text-align:left;margin-bottom:10px}
+    .huerde2-slide .col-chart img{width:100%;height:auto;display:block;border-radius:4px}
+  </style>
+  <div class="hd">Hürde 2: Spielräume des Bundeshaushalts sind begrenzt</div>
+  <div class="area">
+    <div class="lever-grid">
+      <div class="mainc">Eine vollständige Integration der Verteidigungsausgaben in den Haushalt bedeutet eine Halbierung der laufenden Ausgaben ohne Zinsen.</div>
+      <div class="col-chart">
+        <div class="fig-title">Bundeshaushalt 2030</div>
+        <!--FIGURE:verteidigungsausgaben-haushalt-card-->
+      </div>
+    </div>
+  </div>
+  <div class="src"><!--SOURCE--></div>
+  <div class="foot"><div class="mark"><!--WORTMARKE_MARK--></div><div class="pagenum">4</div></div>
+</section>
+
+<section class="slide transition-slide" data-notes="Überleitung zu den Kernthesen: Bayern hat wirtschaftliche Aufstiege schon oft geschafft — der Aufstieg im Bild steht dafür.">
+  <style>
+    .transition-slide .bg-photo{position:absolute;left:293px;top:118px;width:694px;height:521px;border-radius:4px;overflow:hidden}
+    .transition-slide .bg-photo .plot{width:100%;height:100%;display:block}
+    .transition-slide .bg-photo .plot img{width:100%;height:100%;object-fit:contain;max-width:none;max-height:none;display:block}
+    .transition-slide .cloud-label{position:absolute;width:130px;height:62px;display:flex;align-items:center;justify-content:center;
+      background:#fff;border-radius:31px;box-sizing:border-box;padding:6px 11px;
+      color:var(--accent);font-family:"GT Alpina",serif;font-weight:400;font-size:12px;line-height:1.2;text-align:center;
+      box-shadow:0 3px 10px rgba(0,0,0,.15)}
+    .transition-slide .cloud-label::before,.transition-slide .cloud-label::after,
+    .transition-slide .cloud-label .puff3{content:"";position:absolute;background:#fff;border-radius:50%;z-index:-1}
+    .transition-slide .cloud-label::before{width:35px;height:35px;top:-16px;left:14px}
+    .transition-slide .cloud-label::after{width:29px;height:29px;top:-19px;left:50px}
+    .transition-slide .cloud-label .puff3{width:26px;height:26px;top:-13px;right:12px;display:block}
+  </style>
+  <div class="hd">Wo sonst, wenn nicht in Bayern, lassen sich Hürden überwinden?</div>
+  <div class="bg-photo"><!--FIGURE:bergwanderung-bayern--></div>
+  <div class="cloud-label" style="left:315px;top:145px"><span class="puff3"></span>Sichere Arbeitsplätze</div>
+  <div class="cloud-label" style="left:470px;top:180px"><span class="puff3"></span>Günstiger ÖPNV</div>
+  <div class="cloud-label" style="left:630px;top:140px"><span class="puff3"></span>Kitabetreuung</div>
+  <div class="cloud-label" style="left:790px;top:180px"><span class="puff3"></span>Sicherheit &amp; Wohlstand</div>
+  <div class="foot"><div class="mark"><!--WORTMARKE_MARK--></div><div class="pagenum">5</div></div>
+</section>
+
+<section class="slide divider3-slide" data-notes="Überleitung zum Hauptteil: die drei Wege für Bayern.">
+  <style>
+    .divider3-slide .center-wrap{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+    .divider3-slide .big-stmt{font-family:"GT Alpina",Georgia,serif;font-weight:400;font-size:96px;line-height:1.1;text-align:center;color:var(--schwarz)}
+  </style>
+  <div class="center-wrap"><div class="big-stmt">#3 Wege für Bayern</div></div>
+  <div class="foot"><div class="mark"><!--WORTMARKE_MARK--></div><div class="pagenum">6</div></div>
+</section>
+
+<section class="slide way1-slide" data-notes="Erster von drei Wegen für Bayern: mehr Investitionen für nachhaltige Finanzen. Der Pfeil verweist auf die Vertiefung auf der nächsten Folie.">
+  <style>
+    .way1-slide .way-grid{display:grid;grid-template-columns:579px 579px;column-gap:60px;align-items:start}
+    .way1-slide .fig-title{font-family:"GT Alpina",Georgia,serif;font-size:22px;font-weight:400;
+      color:var(--schwarz);margin-bottom:8px}
+    .way1-slide .chart-col,.way1-slide .map-col{display:flex;flex-direction:column}
+    .way1-slide .chart-box,.way1-slide .map-box{width:579px;height:380px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .way1-slide .chart-box img,.way1-slide .map-box img{width:100%;height:100%;object-fit:cover;display:block;border-radius:4px}
+    .way1-slide .map-box img{border:1px solid rgba(0,0,0,.08)}
+    .philippa-note{position:absolute;right:40px;bottom:75px;max-width:260px;
+      background:#DCF5E3;border:1px solid #9FD8AF;border-radius:6px;
+      padding:10px 14px;font-family:"ABC Social",Inter,Arial,sans-serif;
+      font-size:13px;line-height:1.4;color:#1E6B39}
+  </style>
+  <div class="philippa-note">@Philippa: Nicht sicher, ob die linke Grafik ausreichend ist. Idee: in Bayern läuft's etwas besser als im Rest, aber so top ist es nun auch nicht.</div>
+  <div class="hd">#1 Investitionen für nachhaltige Finanzen tätigen</div>
+  <div class="area">
+    <div class="way-grid">
+      <div class="chart-col">
+        <div class="fig-title">Bruttoanlageinvestitionen – preisbereinigt</div>
+        <div class="chart-box"><!--FIGURE:bip-investitionen-laender-card--></div>
+      </div>
+      <div class="map-col">
+        <div class="fig-title">Investitionen in Bayern</div>
+        <div class="map-box"><!--FIGURE:investitionstracker-bayern-karte--></div>
+      </div>
+    </div>
+  </div>
+  <div class="src"><!--SOURCE--></div>
+  <div class="foot"><div class="mark"><!--WORTMARKE_MARK--></div><div class="pagenum">7</div></div>
+</section>
+
+<section class="slide bip-anteil-slide" data-notes="Warum unsubventionierte Beschäftigung das Ziel sein sollte: die Gesamtausgaben des Bundes in Prozent des BIP steigen strukturell, getrieben von Subventionen an Haushalte und historischen Lasten.">
+  <style>
+    .bip-anteil-slide .area{display:flex;flex-direction:column;justify-content:center}
+    .bip-anteil-slide .fig-wrap{display:flex;justify-content:center}
+    .bip-anteil-slide .fig-wrap img{max-width:100%;max-height:456px;width:auto;height:auto;display:block;border-radius:4px}
+    .philippa-note{position:absolute;right:40px;bottom:75px;max-width:260px;
+      background:#DCF5E3;border:1px solid #9FD8AF;border-radius:6px;
+      padding:10px 14px;font-family:"ABC Social",Inter,Arial,sans-serif;
+      font-size:13px;line-height:1.4;color:#1E6B39}
+  </style>
+  <div class="philippa-note">@Philippa: Ich fand die Slide zu "Gesamtausgaben des Bundes" aus dem Thüga-Vortrag auch super, mit der Aussage "Ziel sollte unsubventionierte Beschäftigung sein". Die hier auf der Slide oder doch lieber die vom Thüga-Vortrag?</div>
+  <div class="hd">Denn das Ziel sollte exzellente öffentliche Leistungen sein</div>
+  <div class="area">
+    <div class="fig-wrap"><!--FIGURE:gesamtausgaben-bundeshaushaltstracker-card--></div>
+  </div>
+  <div class="src"><!--SOURCE--></div>
+  <div class="foot"><div class="mark"><!--WORTMARKE_MARK--></div><div class="pagenum">8</div></div>
+</section>
+
+<section class="slide way2-slide" data-notes="Zweiter von drei Wegen für Bayern: bessere Erholungsfähigkeit als Anpassung an eine unsichere Zukunft. Das Resilienz-Trapez zeigt, wie ein Leistungsniveau nach einem Störereignis über mehrere Phasen wieder aufgebaut wird.">
+  <style>
+    .way2-slide .fig-wrap{display:flex;flex-direction:column;align-items:stretch;width:fit-content;margin:0 auto;height:100%;justify-content:center}
+    .way2-slide .fig-title{font-family:"GT Alpina",Georgia,serif;font-size:22px;font-weight:400;color:var(--schwarz);text-align:left;margin-bottom:10px}
+    .way2-slide .fig-wrap img{max-width:100%;max-height:420px;display:block}
+    .philippa-note{position:absolute;right:40px;bottom:75px;max-width:260px;
+      background:#DCF5E3;border:1px solid #9FD8AF;border-radius:6px;
+      padding:10px 14px;font-family:"ABC Social",Inter,Arial,sans-serif;
+      font-size:13px;line-height:1.4;color:#1E6B39}
+  </style>
+  <div class="philippa-note">@Philippa: ich frage mich, ob man hier nochmal visueller einleiten sollte &amp; es überhaupt eine solche Grafik bräuchte (zB Symbolbilder von den Stromnetzattacken)</div>
+  <div class="hd">#2 Resilienz der Infrastrukturen stärken</div>
+  <div class="area">
+    <div class="fig-wrap">
+      <div class="fig-title">Das Resilienz-Trapez im Verlauf eines Ereignisses</div>
+      <!--FIGURE:resilienz-trapez-original-->
+    </div>
+  </div>
+  <div class="src"><!--SOURCE--></div>
+  <div class="foot"><div class="mark"><!--WORTMARKE_MARK--></div><div class="pagenum">9</div></div>
+</section>
+
+<section class="slide humankapital-slide" data-notes="Historische Evidenz: Der Abgesang aufs Wirtschaftswunder wiederholt sich zyklisch seit 1966 — Humankapital/Bildung als Resilienzfaktor für die nächste Krise.">
+  <style>
+    .humankapital-slide .fig-wrap{display:flex;justify-content:center}
+    .humankapital-slide .fig-wrap img{max-width:100%;max-height:456px;width:auto;height:auto;display:block;border-radius:4px;box-shadow:0 1px 3px rgba(0,0,0,.15)}
+  </style>
+  <div class="hd">Dazu gehört Humankapital – Deutschlands stärkste Kraft</div>
+  <div class="area">
+    <div class="fig-wrap"><!--FIGURE:spiegel-abgesang-marked--></div>
+  </div>
+  <div class="src"><!--SOURCE--></div>
+  <div class="foot"><div class="mark"><!--WORTMARKE_MARK--></div><div class="pagenum">10</div></div>
+</section>
+
+<section class="slide way3-slide" data-notes="Dritter von drei Wegen für Bayern: Kommunen als zentrale Akteure befähigen.">
+  <style>
+    .way3-slide .area{display:flex;justify-content:center}
+    .way3-slide .fig-wrap{display:flex;justify-content:center}
+    .way3-slide .fig-wrap img{max-width:100%;max-height:456px;width:auto;height:auto;display:block;border-radius:4px}
+  </style>
+  <div class="hd">#3 Kommunen als zentrale Akteure befähigen</div>
+  <div class="area">
+    <div class="fig-wrap"><!--FIGURE:kommunen-prioritaeten-card--></div>
+  </div>
+  <div class="src"><!--SOURCE--></div>
+  <div class="foot"><div class="mark"><!--WORTMARKE_MARK--></div><div class="pagenum">11</div></div>
+</section>
+
+<section class="slide energie-treiber-slide" data-notes="Energieinfrastrukturen sind wirtschaftliche Treiber: hohe Tragfähigkeit und häufig im steuerlichen Querverbund mit anderen kommunalen Bereichen.">
+  <style>
+    .energie-treiber-slide .fig-wrap{display:flex;justify-content:center}
+    .energie-treiber-slide .fig-wrap img{max-width:100%;max-height:456px;width:auto;height:auto;display:block;border-radius:4px}
+  </style>
+  <div class="hd">Bei Finanzierungswegen sollten Stadtwerke im Fokus sein</div>
+  <div class="area">
+    <div class="fig-wrap"><!--FIGURE:energie-tragfaehigkeit-card--></div>
+  </div>
+  <div class="src"><!--SOURCE--></div>
+  <div class="foot"><div class="mark"><!--WORTMARKE_MARK--></div><div class="pagenum">12</div></div>
+</section>
+
+<section class="slide netzinvestitionen-slide" data-notes="Der verbleibende Eigenkapitalbedarf für Netzinvestitionen bis 2035 ist trotz Ausschöpfung anderer Finanzierungsoptionen nicht gedeckt.">
+  <style>
+    .netzinvestitionen-slide .lever-grid{display:grid;grid-template-columns:330px 829px;column-gap:60px;align-items:center}
+    .netzinvestitionen-slide .lever-grid>.mainc{font-family:"GT Alpina",Georgia,serif;font-size:20px;line-height:1.4}
+    .netzinvestitionen-slide .fig-title{font-family:"GT Alpina",Georgia,serif;font-size:20px;font-weight:400;color:var(--schwarz);text-align:left;margin-bottom:10px}
+    .netzinvestitionen-slide .col-chart img{width:100%;height:auto;display:block;border-radius:4px}
+  </style>
+  <div class="hd">Cashcow-Rolle des Stadtwerks eine Frage des Eigenkapitals</div>
+  <div class="area">
+    <div class="lever-grid">
+      <div class="mainc">Bayerns Energieversorger müssen 2026–2045 rund 92 Mrd. Euro in Strom- und Wärmenetze investieren – etwa das Dreifache des bisherigen Niveaus. Dafür fehlen ihnen 1,6 Mrd. Euro Eigenkapital.</div>
+      <div class="col-chart">
+        <div class="fig-title">Eigenkapitalbedarf und -lücke in Bayern, 2026–2035</div>
+        <!--FIGURE:eigenkapitalluecke-bayern-card-->
+      </div>
+    </div>
+  </div>
+  <div class="src"><!--SOURCE--></div>
+  <div class="foot"><div class="mark"><!--WORTMARKE_MARK--></div><div class="pagenum">13</div></div>
+</section>
+
+<section class="slide art61-slide" data-notes="Rechtliche Grundlage: Art. 61 GO nennt die Reihenfolge der Haushaltsgrundsätze explizit — Aufgabenerfüllung und dauernde Leistungsfähigkeit stehen vor Sparsamkeit.">
+  <style>
+    .art61-slide .fig-wrap{display:flex;justify-content:center}
+    .art61-slide .fig-wrap img{max-width:100%;max-height:456px;width:auto;height:auto;display:block;border-radius:4px;box-shadow:0 1px 3px rgba(0,0,0,.15)}
+  </style>
+  <div class="hd">Kommunen in Bayern: Versorgung ist oberste Pflicht</div>
+  <div class="area">
+    <div class="fig-wrap"><!--FIGURE:art61-go-marked--></div>
+  </div>
+  <div class="src"><!--SOURCE--></div>
+  <div class="foot"><div class="mark"><!--WORTMARKE_MARK--></div><div class="pagenum">14</div></div>
+</section>
+
+<section class="slide kreditaufnahme-slide" data-notes="Rentierliche Schulden: Kreditaufnahmen für Investitionen, die keine Haushaltsmittel beanspruchen und die dauernde Leistungsfähigkeit wahren, sind genehmigungsfähig.">
+  <style>
+    .kreditaufnahme-slide .lever-grid{display:grid;grid-template-columns:330px 829px;column-gap:60px;align-items:start}
+    .kreditaufnahme-slide .lever-grid>.mainc{font-family:"GT Alpina",Georgia,serif;font-size:20px;line-height:1.4}
+    .kreditaufnahme-slide .mainc{grid-column:1}
+    .kreditaufnahme-slide .mainc[data-step]{display:none}
+    .kreditaufnahme-slide .para-stack{grid-column:2;display:flex;flex-direction:column;gap:10px}
+    .kreditaufnahme-slide .para-step{display:none}
+    .kreditaufnahme-slide .para-step[data-step="0"]{display:block}
+    .kreditaufnahme-slide .para-step img{width:700px;max-width:100%;height:auto;display:block;border-radius:4px;box-shadow:0 1px 3px rgba(0,0,0,.15)}
+  </style>
+  <div class="hd">Auch Energieinfrastrukturen sind „rentable“ Investitionen</div>
+  <div class="area">
+    <div class="lever-grid">
+      <div class="mainc" data-step="2">Nicht die Art der Einrichtung entscheidet, sondern ob ein strukturell abgesicherter, gesetzlich/vertraglich verankerter Kostendeckungsmechanismus mit Laufzeitkongruenz existiert.</div>
+      <div class="para-stack">
+        <div class="para-step" data-step="0"><!--FIGURE:kreditaufnahme-para1--></div>
+        <div class="para-step" data-step="1"><!--FIGURE:kreditaufnahme-para2--></div>
+        <div class="para-step" data-step="2"><!--FIGURE:kreditaufnahme-para3--></div>
+      </div>
+    </div>
+  </div>
+  <div class="src"><!--SOURCE--></div>
+  <div class="foot"><div class="mark"><!--WORTMARKE_MARK--></div><div class="pagenum">15</div></div>
+  <script>
+  (function(){
+    var section = document.currentScript.closest('section');
+    var items = [].slice.call(section.querySelectorAll('[data-step]'));
+    var max = items.reduce(function(m, el){ return Math.max(m, parseInt(el.getAttribute('data-step'), 10)); }, 0);
+    var step = 0;
+    function render(){
+      items.forEach(function(el){
+        el.style.display = (parseInt(el.getAttribute('data-step'), 10) <= step) ? 'block' : 'none';
+      });
+    }
+    function advance(dir){
+      if(!section.classList.contains('active')) return false;
+      var next = step + dir;
+      if(next < 0 || next > max) return false;
+      step = next; render(); return true;
+    }
+    document.addEventListener('keydown', function(e){
+      if(!section.classList.contains('active')) return;
+      if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){
+        if(advance(1)){ e.preventDefault(); e.stopImmediatePropagation(); }
+      } else if(e.key==='ArrowLeft'||e.key==='PageUp'){
+        if(advance(-1)){ e.preventDefault(); e.stopImmediatePropagation(); }
+      }
+    }, true);
+    document.addEventListener('click', function(e){
+      if(!section.classList.contains('active')) return;
+      var dir = (e.clientX < window.innerWidth*0.28) ? -1 : 1;
+      if(advance(dir)){ e.stopImmediatePropagation(); }
+    }, true);
+  })();
+  </script>
+</section>
+
+<section class="slide buergschaft-slide" data-notes="Bürgschaftskaskade: Die Kommune reicht einen regulären Kredit als Gesellschaftsdarlehen an ihr EVU weiter. Das Land bürgt für das Ausfallrisiko, der Bund bürgt anteilig über eine Rückbürgschaft für das Land.">
+  <style>
+    .buergschaft-slide .diagram-wrap{display:flex;flex-direction:column;align-items:center;height:100%;justify-content:center}
+    .buergschaft-slide .diagram-wrap svg{width:100%;max-height:340px}
+    .buergschaft-slide .diagram-caption{font-family:"ABC Social",Inter,Arial,sans-serif;font-size:14px;line-height:1.4;color:var(--body);margin-top:10px;max-width:1100px}
+    .buergschaft-slide .diagram-caption[data-step]{display:none}
+  </style>
+  <div class="hd">Risiko des Konzernkredits gering, Land kann weiter senken</div>
+  <div class="area">
+    <div class="diagram-wrap">
+      <svg viewBox="0 0 1219 330" xmlns="http://www.w3.org/2000/svg" font-family="ABC Social, Inter, Arial, sans-serif">
+        <g data-step="1" style="display:none">
+          <!-- Bund: dashed outer box with blue label chip -->
+          <rect x="60" y="15" width="340" height="110" fill="none" stroke="#000" stroke-width="2" stroke-dasharray="7,5"/>
+          <rect x="60" y="15" width="340" height="45" fill="#4A72B0"/>
+          <text x="230" y="43" text-anchor="middle" font-size="20" fill="#fff">Bund</text>
+          <text x="230" y="95" text-anchor="middle" font-size="15" fill="#000">Bürgt anteilig für</text>
+          <text x="230" y="114" text-anchor="middle" font-size="15" fill="#000">Ausfallrisiko</text>
+
+          <!-- Bund -> Land arrow -->
+          <line x1="230" y1="125" x2="230" y2="165" stroke="#000" stroke-width="2"/>
+          <polygon points="230,173 223,161 237,161" fill="#000"/>
+
+          <!-- Land box: darker orange than Kommune — same family, since both carry the guarantee -->
+          <rect x="60" y="173" width="340" height="45" fill="#BF5B3A"/>
+          <text x="230" y="201" text-anchor="middle" font-size="20" fill="#fff">Land</text>
+
+          <!-- Land -> Kommune/EVU diagonal arrow: the guarantee covers this loan, it carries no capital itself -->
+          <line x1="405" y1="185" x2="675" y2="207" stroke="#000" stroke-width="2"/>
+          <polygon points="684,208 674,213 676,201" fill="#000"/>
+          <text x="420" y="171" font-size="14" fill="#000">Bürgt für Ausfallrisiko</text>
+        </g>
+
+        <!-- Hausbank box: dark grey — the private market actor, outside the guarantee chain -->
+        <rect x="700" y="15" width="340" height="45" fill="#595959"/>
+        <text x="870" y="43" text-anchor="middle" font-size="18" fill="#fff">Hausbank/Anleihenmarkt</text>
+
+        <!-- Hausbank -> Kommune arrow -->
+        <line x1="870" y1="60" x2="870" y2="122" stroke="#000" stroke-width="2"/>
+        <polygon points="870,130 863,118 877,118" fill="#000"/>
+        <text x="895" y="99" font-size="14" fill="#000">Kreditaufnahme</text>
+
+        <!-- Kommune box: orange — the pivotal legal actor linking both chains -->
+        <rect x="700" y="130" width="340" height="45" fill="#FF794D"/>
+        <text x="870" y="158" text-anchor="middle" font-size="20" fill="#000">Kommune</text>
+
+        <!-- Kommune -> Kommunales EVU arrow: this is the actual capital pass-through -->
+        <line x1="870" y1="175" x2="870" y2="237" stroke="#000" stroke-width="2"/>
+        <polygon points="870,245 863,233 877,233" fill="#000"/>
+        <text x="895" y="196" font-size="14" fill="#000">Weitergabe als</text>
+        <text x="895" y="212" font-size="14" fill="#000">Gesellschafterdarlehen/</text>
+        <text x="895" y="228" font-size="14" fill="#000">Konzernkredit</text>
+
+        <!-- Kommunales EVU box: light grey — the operating company, distinct from its owner (Kommune) -->
+        <rect x="700" y="245" width="340" height="45" fill="#D9D9D9"/>
+        <text x="870" y="273" text-anchor="middle" font-size="18" fill="#000">Kommunales EVU</text>
+      </svg>
+      <div class="diagram-caption" data-step="1">Die Kommune nimmt regulär einen Kredit auf und gibt diesen als Gesellschaftsdarlehen/Konzernkredit an ihr EVU weiter. Das Land übernimmt eine Bürgschaft für das Ausfallrisiko, z. B. für die Zinszahlungen des EVU; der Bund bürgt anteilig für diese Ausfallrisiken über eine Rückbürgschaft.</div>
+    </div>
+  </div>
+  <div class="src"><!--SOURCE--></div>
+  <div class="foot"><div class="mark"><!--WORTMARKE_MARK--></div><div class="pagenum">16</div></div>
+  <script>
+  (function(){
+    var section = document.currentScript.closest('section');
+    var items = [].slice.call(section.querySelectorAll('[data-step]'));
+    var max = items.reduce(function(m, el){ return Math.max(m, parseInt(el.getAttribute('data-step'), 10)); }, 0);
+    var step = 0;
+    function render(){
+      items.forEach(function(el){
+        var show = parseInt(el.getAttribute('data-step'), 10) <= step;
+        el.style.display = show ? (el.tagName.toLowerCase() === 'g' ? 'inline' : 'block') : 'none';
+      });
+    }
+    function advance(dir){
+      if(!section.classList.contains('active')) return false;
+      var next = step + dir;
+      if(next < 0 || next > max) return false;
+      step = next; render(); return true;
+    }
+    document.addEventListener('keydown', function(e){
+      if(!section.classList.contains('active')) return;
+      if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){
+        if(advance(1)){ e.preventDefault(); e.stopImmediatePropagation(); }
+      } else if(e.key==='ArrowLeft'||e.key==='PageUp'){
+        if(advance(-1)){ e.preventDefault(); e.stopImmediatePropagation(); }
+      }
+    }, true);
+    document.addEventListener('click', function(e){
+      if(!section.classList.contains('active')) return;
+      var dir = (e.clientX < window.innerWidth*0.28) ? -1 : 1;
+      if(advance(dir)){ e.stopImmediatePropagation(); }
+    }, true);
+  })();
+  </script>
+</section>
+
+<section class="slide finanzierungsbedarf-slide" data-notes="Heutige Investitionen in Energieinfrastrukturen sparen künftige Kosten und stärken kommunale Einnahmen; die dauernde Leistungsfähigkeit der kommunalen Unternehmen ist dabei rechtlich mitzubeurteilen.">
+  <style>
+    .finanzierungsbedarf-slide .area{display:flex;flex-direction:column;align-items:center;justify-content:center}
+    .finanzierungsbedarf-slide .content-wrap{display:flex;flex-direction:column;width:fit-content;margin:0 auto}
+    .finanzierungsbedarf-slide .fig-title{font-family:"GT Alpina",Georgia,serif;font-size:22px;font-weight:400;color:var(--schwarz);text-align:left}
+    .finanzierungsbedarf-slide .fig-subtitle{font-family:"ABC Social",Inter,Arial,sans-serif;font-size:13px;color:var(--muted);text-align:left;margin-bottom:14px}
+    .finanzierungsbedarf-slide .chart-box img{max-width:100%;max-height:330px;width:auto;height:auto;display:block;border-radius:4px}
+    .finanzierungsbedarf-slide .legal-box{display:none;margin-top:12px}
+    .finanzierungsbedarf-slide .legal-box[data-step="1"]{display:none}
+    .finanzierungsbedarf-slide .legal-box img{max-width:100%;max-height:64px;width:auto;height:auto;display:block;border-radius:3px;box-shadow:0 1px 3px rgba(0,0,0,.15)}
+  </style>
+  <div class="hd">Nur eine investierende Kommune bleibt langfristig leistungsfähig</div>
+  <div class="area">
+    <div class="content-wrap">
+      <div class="fig-title">Gesamtfinanzierungsbedarf der EVU in Bayern, 2021–2045</div>
+      <div class="fig-subtitle">In Mrd. €, nominal</div>
+      <div class="chart-box"><!--FIGURE:gesamtfinanzierungsbedarf-bayern-card--></div>
+      <div class="legal-box" data-step="1"><!--FIGURE:beurteilung-leistungsfaehigkeit-kommunen--></div>
+    </div>
+  </div>
+  <div class="src"><!--SOURCE--></div>
+  <div class="foot"><div class="mark"><!--WORTMARKE_MARK--></div><div class="pagenum">17</div></div>
+  <script>
+  (function(){
+    var section = document.currentScript.closest('section');
+    var items = [].slice.call(section.querySelectorAll('[data-step]'));
+    var max = items.reduce(function(m, el){ return Math.max(m, parseInt(el.getAttribute('data-step'), 10)); }, 0);
+    var step = 0;
+    function render(){
+      items.forEach(function(el){
+        el.style.display = (parseInt(el.getAttribute('data-step'), 10) <= step) ? 'flex' : 'none';
+      });
+    }
+    function advance(dir){
+      if(!section.classList.contains('active')) return false;
+      var next = step + dir;
+      if(next < 0 || next > max) return false;
+      step = next; render(); return true;
+    }
+    document.addEventListener('keydown', function(e){
+      if(!section.classList.contains('active')) return;
+      if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){
+        if(advance(1)){ e.preventDefault(); e.stopImmediatePropagation(); }
+      } else if(e.key==='ArrowLeft'||e.key==='PageUp'){
+        if(advance(-1)){ e.preventDefault(); e.stopImmediatePropagation(); }
+      }
+    }, true);
+    document.addEventListener('click', function(e){
+      if(!section.classList.contains('active')) return;
+      var dir = (e.clientX < window.innerWidth*0.28) ? -1 : 1;
+      if(advance(dir)){ e.stopImmediatePropagation(); }
+    }, true);
+  })();
+  </script>
+</section>
+
+<section class="slide wanderkarte-slide" data-notes="Abschluss: Wir kennen den Weg — die Aufstiegsmetapher vom Anfang kehrt zurück, diesmal als Zuversicht statt als offene Frage.">
+  <style>
+    .wanderkarte-slide .bg-photo{position:absolute;left:293px;top:118px;width:694px;height:521px;border-radius:4px;overflow:hidden}
+    .wanderkarte-slide .bg-photo .plot{width:100%;height:100%;display:block}
+    .wanderkarte-slide .bg-photo .plot img{width:100%;height:100%;object-fit:contain;max-width:none;max-height:none;display:block}
+    .wanderkarte-slide .cloud-label{position:absolute;width:130px;height:62px;display:flex;align-items:center;justify-content:center;
+      background:#fff;border-radius:31px;box-sizing:border-box;padding:6px 11px;
+      color:var(--accent);font-family:"GT Alpina",serif;font-weight:400;font-size:12px;line-height:1.2;text-align:center;
+      box-shadow:0 3px 10px rgba(0,0,0,.15)}
+    .wanderkarte-slide .cloud-label::before,.wanderkarte-slide .cloud-label::after,
+    .wanderkarte-slide .cloud-label .puff3{content:"";position:absolute;background:#fff;border-radius:50%;z-index:-1}
+    .wanderkarte-slide .cloud-label::before{width:35px;height:35px;top:-16px;left:14px}
+    .wanderkarte-slide .cloud-label::after{width:29px;height:29px;top:-19px;left:50px}
+    .wanderkarte-slide .cloud-label .puff3{width:26px;height:26px;top:-13px;right:12px;display:block}
+  </style>
+  <div class="hd">Wir haben die (Wander-)Karte in der Hand!</div>
+  <div class="bg-photo"><!--FIGURE:bergwanderung-bayern--></div>
+  <div class="cloud-label" style="left:315px;top:145px"><span class="puff3"></span>Sichere Arbeitsplätze</div>
+  <div class="cloud-label" style="left:470px;top:180px"><span class="puff3"></span>Günstiger ÖPNV</div>
+  <div class="cloud-label" style="left:630px;top:140px"><span class="puff3"></span>Kitabetreuung</div>
+  <div class="cloud-label" style="left:790px;top:180px"><span class="puff3"></span>Sicherheit &amp; Wohlstand</div>
+  <div class="foot"><div class="mark"><!--WORTMARKE_MARK--></div><div class="pagenum">18</div></div>
+</section>
+
+<section class="slide danke-slide" data-notes="Stop. Take questions.">
+  <style>
+    .danke-slide .content-grid{position:absolute;left:var(--margin);top:150px;width:1219px;height:462px;
+      display:grid;grid-template-columns:1fr 340px;column-gap:60px;align-items:center}
+    .danke-slide .portrait{width:340px;height:453px;overflow:hidden;border-radius:4px}
+    .danke-slide .portrait img{width:100%;height:100%;object-fit:cover;display:block}
+    .danke-slide .stmt-text{font-family:"GT Alpina",Georgia,serif;font-weight:400;font-size:84px;line-height:1.1;color:var(--schwarz)}
+    .danke-slide .contact{font-family:"ABC Social",Inter,Arial,sans-serif;font-size:22px;line-height:1.6;color:var(--muted);margin-top:32px}
+    .danke-slide .contact a{color:var(--muted)}
+  </style>
+  <div class="content-grid">
+    <div>
+      <div class="stmt-text">Danke!</div>
+      <div class="contact">Philippa Sigl-Glöckner<br>philippa.sigl-gloeckner@dezernatzukunft.org<br>www.dezernatzukunft.org</div>
+    </div>
+    <div class="portrait"><!--FIGURE:philippa-portrait--></div>
+  </div>
+  <div class="foot"><div class="mark"><!--WORTMARKE_MARK--></div><div class="pagenum">19</div></div>
+</section>
+
+<section class="slide" data-notes="Vollständige Quellenangaben.">
+  <style>
+    .biblio-list p{margin:0 0 14px;text-indent:-1em;padding-left:1em;-webkit-column-break-inside:avoid;break-inside:avoid}
+  </style>
+  <div class="hd">Quellen</div>
+  <div class="area">
+    <div class="biblio-list biblio" style="column-count:2;column-gap:48px;font-size:14px;line-height:1.5;color:var(--body)">
+      <p>Agora Energiewende / Stiftung Klimaneutralität / Dezernat Zukunft (2026): "Investitionen in eine zukunftsfähige Daseinsvorsorge – Aufschlüsselung nach Bundesländern", 09.03.2026.</p>
+      <p>Baldursson, F. M. / Banet, C. / Chyong, C. K. (2023): "Building Resilience in Europe's Energy System", CERRE.</p>
+      <p>Bayerische Gemeindeordnung (BayGO), Art. 61 – Allgemeine Haushaltsgrundsätze.</p>
+      <p>Bayerisches Staatsministerium des Innern (2008): "Finanzplanung 2007 bis 2011 der kommunalen Körperschaften und Hinweise zu verschiedenen Fragen des Haushaltsvollzugs", Nr. 5, Bekanntmachung vom 06.02.2008.</p>
+      <p>Bayerisches Staatsministerium des Innern (2010): Bekanntmachung vom 10.03.2010, Nr. 6.1, AllMBl S. 87.</p>
+      <p>Bayerisches Staatsministerium des Innern (2012): Schreiben vom 31.07.2012, Az. IB3-3321-7.</p>
+      <p>Finanzplan 2026–2030.</p>
+      <p>Görlich, P. / Paleschke, M. (2026): "Welche Märkte lohnen sich?", Dezernat Zukunft.</p>
+      <p>KfW (2024): "KfW-Kommunalpanel 2024".</p>
+      <p>KfW (2026): "KfW-Kommunalpanel 2026".</p>
+      <p>Mayer, A. / Wilhelm, M. (2022): "Das Wirtschaftswunder – Die Bundesrepublik 1948 bis 1960", Elsengold.</p>
+      <p>Richter, K. (2025): "Dreihundert Männer. Aufstieg und Fall der Deutschland AG", Suhrkamp.</p>
+      <p>Schuster-Johnson et al. (2026): "Was kostet die Verteidigung im Bundeshaushalt?"</p>
+      <p>The Economist (2022): "The New Germany", 13.–19. August 2022.</p>
+      <p>Umunnakwe, A. / Huang, H. / Oikonomou, K. / Davis, K. R. (2021): "Quantitative analysis of power systems resilience: Standardization, categorizations, and challenges", Renewable and Sustainable Energy Reviews, 149, 111252.</p>
+      <p>WirtschaftsWoche (2023): "Großbaustelle Volkswagen", Ausgabe 28, 7.7.2023.</p>
+    </div>
+  </div>
+  <div class="foot"><div class="mark"><!--WORTMARKE_MARK--></div><div class="pagenum">20</div></div>
+</section>

@@ -1,0 +1,30 @@
+{
+    "brand": "dz",
+    "language": "de",
+    "chart": {
+        "type": "custom",
+        "title": "Verbleibender Eigenkapitalbedarf bis 2035 nach Nutzung anderer Finanzierungsoptionen",
+        "subtitle": "Nach Ausschöpfung anderer Finanzierungsoptionen, in Mrd. Euro"
+    },
+    "axes": {
+        "y": {"unit": "Mrd. Euro"}
+    },
+    "margins": {"bottom": 95},
+    "legend": {"position": "none"},
+    "data": [
+        {"category": "Eigenkapital-\nbedarf", "value": 10.0, "kind": "total"},
+        {"category": "Höhere Fremd-\nkapitalfinanzierung", "value": -5.6},
+        {"category": "Höhere Innen-\nfinanzierung", "value": -0.7},
+        {"category": "Finanzierung durch\nBestandsgesellschafter", "value": -2.2},
+        {"category": "Eigenkapital-\nlücke", "value": 1.6, "kind": "total", "highlight": true}
+    ],
+    "seriesConfig": [
+        {"key": "value", "name": "Mrd. Euro"}
+    ],
+    "lesebeispiel": {
+        "text": "Von einem Eigenkapitalbedarf in Höhe von 10,0 Mrd. Euro verbleiben nach höherer Fremdkapitalfinanzierung (-5,6), höherer Innenfinanzierung (-0,7) und Finanzierung durch Bestandsgesellschafter (-2,2) noch 1,6 Mrd. Euro Eigenkapitallücke bis 2035."
+    },
+    "source": {
+        "items": ["Agora Energiewende/Stiftung Klimaneutralität/Dezernat Zukunft (2026)"]
+    }
+}

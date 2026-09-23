@@ -1,0 +1,54 @@
+{
+    "brand": "dz",
+    "language": "de",
+    "chart": {
+        "type": "custom",
+        "title": "Gesamtfinanzierungsbedarf 2021 bis 2045",
+        "subtitle": "Bayern, nominal"
+    },
+    "axes": {
+        "y": {"unit": "Mrd. Euro"},
+        "x": {"rotate": true}
+    },
+    "legend": {"position": "bottom"},
+    "margins": {"bottom": 100},
+    "layout": {"width": 1200, "height": 480},
+    "data": [
+        {"category": "2021", "eigenkapital": 0.0, "fremdkapital": 0.6, "innenfinanzierung": 0.5},
+        {"category": "2022", "eigenkapital": 0.0, "fremdkapital": 0.7, "innenfinanzierung": 0.5},
+        {"category": "2023", "eigenkapital": 0.0, "fremdkapital": 0.9, "innenfinanzierung": 0.5},
+        {"category": "2024", "eigenkapital": 0.0, "fremdkapital": 1.1, "innenfinanzierung": 0.5},
+        {"category": "2025", "eigenkapital": 0.4, "fremdkapital": 2.9, "innenfinanzierung": 0.5},
+        {"category": "2026", "eigenkapital": 0.9, "fremdkapital": 2.5, "innenfinanzierung": 0.5},
+        {"category": "2027", "eigenkapital": 1.1, "fremdkapital": 2.7, "innenfinanzierung": 0.5},
+        {"category": "2028", "eigenkapital": 1.1, "fremdkapital": 2.7, "innenfinanzierung": 0.6},
+        {"category": "2029", "eigenkapital": 1.1, "fremdkapital": 2.7, "innenfinanzierung": 0.7},
+        {"category": "2030", "eigenkapital": 1.0, "fremdkapital": 2.7, "innenfinanzierung": 0.8},
+        {"category": "2031", "eigenkapital": 1.0, "fremdkapital": 2.9, "innenfinanzierung": 0.9},
+        {"category": "2032", "eigenkapital": 1.0, "fremdkapital": 3.0, "innenfinanzierung": 1.0},
+        {"category": "2033", "eigenkapital": 1.0, "fremdkapital": 3.1, "innenfinanzierung": 1.1},
+        {"category": "2034", "eigenkapital": 0.9, "fremdkapital": 3.2, "innenfinanzierung": 1.2},
+        {"category": "2035", "eigenkapital": 0.9, "fremdkapital": 3.3, "innenfinanzierung": 1.4},
+        {"category": "2036", "eigenkapital": 0.4, "fremdkapital": 2.9, "innenfinanzierung": 1.5},
+        {"category": "2037", "eigenkapital": 0.3, "fremdkapital": 2.9, "innenfinanzierung": 1.6},
+        {"category": "2038", "eigenkapital": 0.2, "fremdkapital": 2.9, "innenfinanzierung": 1.7},
+        {"category": "2039", "eigenkapital": 0.1, "fremdkapital": 2.8, "innenfinanzierung": 1.8},
+        {"category": "2040", "eigenkapital": 0.0, "fremdkapital": 2.9, "innenfinanzierung": 1.9},
+        {"category": "2041", "eigenkapital": 0.0, "fremdkapital": 2.2, "innenfinanzierung": 1.9},
+        {"category": "2042", "eigenkapital": -0.1, "fremdkapital": 2.1, "innenfinanzierung": 2.0},
+        {"category": "2043", "eigenkapital": -0.2, "fremdkapital": 2.0, "innenfinanzierung": 2.1},
+        {"category": "2044", "eigenkapital": -0.3, "fremdkapital": 1.8, "innenfinanzierung": 2.2},
+        {"category": "2045", "eigenkapital": -0.3, "fremdkapital": 1.8, "innenfinanzierung": 2.3}
+    ],
+    "seriesConfig": [
+        {"key": "eigenkapital", "name": "Eigenkapital", "color": "#FF794D"},
+        {"key": "fremdkapital", "name": "Fremdkapital", "color": "#7E7E7E"},
+        {"key": "innenfinanzierung", "name": "Innenfinanzierung", "color": "#CCCCCC"}
+    ],
+    "lesebeispiel": {
+        "text": "2035 lag der Gesamtfinanzierungsbedarf bei rund 5,6 Mrd. Euro – 0,9 Mrd. Euro Eigenkapital, 3,3 Mrd. Euro Fremdkapital und 1,4 Mrd. Euro Innenfinanzierung. Ab rund 2042 kann sogar Eigenkapital zurückgeführt werden, da der Investitionsbedarf sinkt und die Innenfinanzierung steigt."
+    },
+    "source": {
+        "items": ["Agora Energiewende/Stiftung Klimaneutralität/Dezernat Zukunft (2026)"]
+    }
+}
